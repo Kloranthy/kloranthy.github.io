@@ -151,7 +151,7 @@
   main > section {
     min-height: max-content;
 
-    padding: 8px 16px 8px 16px;
+    padding: 8px 16px 20px 16px;
 
     margin: 8px;
   }
@@ -187,6 +187,10 @@
 
   .schools-attended-entries {
     width: 96%;
+  }
+  .school-attended-entry {
+    padding-bottom: 8px;
+    margin-bottom: 4px;
   }
   .school-attended-entry > p {
     width: 96%;
@@ -282,7 +286,7 @@
 
 
 /************************************************
-  appearance?
+  theme ( appearance? )
 ************************************************/
 
   #app-container {
@@ -304,11 +308,6 @@
   footer {
     border: thin solid black;
   }
-  /*
-  h2,
-  .school-attended-entry,
-  section
-  */
 
 /************************************************/
 
@@ -361,9 +360,6 @@
     section {
       border: thin solid black;
     }
-    li {
-      border: thin solid black;
-    }
 
     section,
     p,
@@ -381,24 +377,6 @@
       page-break-before: always;
     }
   }
-
-/************************************************/
-
-
-/************************************************
-  debug
-************************************************/
-
-  /*/
-  #app-container {
-    background-color: #221;
-  }
-    * {
-      border: thin solid black;
-    }
-  /*/
-
-
 
 /************************************************/
 
