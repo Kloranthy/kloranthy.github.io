@@ -1,0 +1,404 @@
+
+
+/************************************************
+  default box-model sizing and font
+************************************************/
+
+  * {
+    box-sizing: border-box;
+
+    min-width: min-content;
+    max-width: 100%;
+
+    min-height: min-content;
+    max-height: 100%;
+
+    margin: auto;
+    
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.5em;
+  }
+
+  body {
+    width: 100%;
+    height: 100%;
+    min-height: max-content;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    margin: 0;
+    padding: 0;
+
+    font-size: 100%;
+  }
+
+/************************************************/
+
+
+/************************************************
+  element default styling
+************************************************/
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: 0.1em;
+  }
+  h1 {
+    padding: 16px 36px 16px 36px;
+
+    text-align: center;
+  }
+  h2 {
+    padding: 12px 24px 12px 24px;
+
+    font-size: 20px;
+  }
+  h3 {
+    padding: 8px 16px 8px 16px;
+  }
+
+  strong {
+    letter-spacing: 1px;
+  }
+
+  p {
+    padding: 8px 16px 8px 16px;
+  }
+
+  a, span {
+    display: inline-block;
+
+    padding: 4px;
+
+    text-align: center;
+  }
+
+  ul {
+    padding: 4px;
+
+    list-style: none;
+  }
+  ul > li {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+  li + li {
+    margin-top: 16px;
+  }
+  li {
+    padding: 4px;
+  }
+
+/************************************************/
+
+
+/************************************************
+  size and spacing
+************************************************/
+
+  #app-container {
+    width: 100%;
+
+    height: 100%;
+    min-height: max-content;
+    max-height: unset;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    padding: 16px;
+
+    margin: 0;
+  }
+
+  header,
+  main,
+  footer {
+    width: 100%;
+    min-width: 400px;
+    max-width: 860px;
+
+    min-height: max-content;
+
+    padding: 16px;
+  }
+  header,
+  main {
+    margin-bottom: 16px;
+  }
+
+
+  header > * {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  header > h1 {
+    flex-grow: 0.6;
+
+    padding-top: 1em;
+  }
+
+
+  main > section {
+    min-height: max-content;
+
+    padding: 8px 16px 8px 16px;
+
+    margin: 8px;
+  }
+  main > section + section {
+    margin-top: 16px;
+  }
+  main > section > * {
+    width: 90%;
+  }
+  main > section > h2 {
+    width: 96%;
+  }
+  main > section > * + * {
+    margin-top: 8px;
+  }
+
+
+  #contact-info-container {
+    flex-grow: 0.2;
+
+    padding: 8px;
+  }
+  #contact-info-container > a {
+    display: block;
+    min-width: fit-content;
+
+    margin: 0;
+  }
+  #contact-info-container > a + a {
+    margin-top: 4px;
+  }
+
+
+  .schools-attended-entries {
+    width: 96%;
+  }
+  .school-attended-entry > p {
+    width: 96%;
+  }
+  .school-attended-details {
+    width: 96%;
+
+    margin-top: 4px;
+  }
+  .school-attended-details > span {
+    display: inline-block;
+
+    min-width: 36%;
+
+    margin-left: 4px;
+    margin-right: 4px;
+
+    text-align: start;
+  }
+
+
+/************************************************/
+
+
+/************************************************
+  structure ( alignment/flow )
+************************************************/
+
+  #app-container {
+    display:  flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    /* vertical */
+    justify-content: space-between;
+    /* horizontal */
+    align-items: stretch;
+  }
+
+  header {
+    display:  flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* vertical */
+    align-items: stretch;
+    /* horizontal */
+    justify-content: space-between;
+  }
+
+  main {
+    display:  flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    /* vertical */
+    justify-content: flex-start;
+    /* horizontal */
+    align-items: stretch;
+
+    /* flex item */
+    flex-grow: 1;
+  }
+  footer {
+    display:  flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* vertical */
+    align-items: flex-start;
+    /* horizontal */
+    justify-content: space-around;
+  }
+
+  #contact-info-container {
+    display:  flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    /* vertical */
+    justify-content: space-between;
+    /* horizontal */
+    align-items: stretch;
+  }
+
+  .school-attended-details {
+    display:  flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* vertical */
+    align-items: stretch;
+    align-content: space-between;
+    /* horizontal */
+    justify-content: space-between;
+  }
+
+/************************************************/
+
+
+/************************************************
+  appearance?
+************************************************/
+
+  #app-container {
+    background-color: hsl(60, 24%, 88%);
+  }
+
+  header,
+  main,
+  footer {
+    background-color: hsl(60, 16%, 93%);
+  }
+
+  a {
+    color: inherit;
+  }
+  
+  header,
+  main,
+  footer {
+    border: thin solid black;
+  }
+  /*
+  h2,
+  .school-attended-entry,
+  section
+  */
+
+/************************************************/
+
+
+/************************************************
+  typography
+************************************************/
+
+  #contact-info-container a {
+    text-decoration: none;
+  }
+
+  .school-attended-entry h3 {
+    font-size: 1em;
+  }
+
+/************************************************/
+
+
+/************************************************
+  print
+************************************************/
+  @media print {
+    * {
+      background-color: #fff;
+      line-height: 1.2em;
+
+      font-family: serif;
+    }
+
+    #app-container {
+      padding: 0;
+    }
+
+    header,
+    main,
+    footer {
+      width: 100%;
+      max-width: 100%;
+
+      margin: 0;
+    }
+    main {
+      padding: 0;
+    }
+
+    h2 {
+      border: none;
+    }
+    section {
+      border: thin solid black;
+    }
+    li {
+      border: thin solid black;
+    }
+
+    section,
+    p,
+    li {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    section {
+      break-after: auto;
+      page-break-after: always;
+    }
+    li,
+    h2 {
+      break-before: auto;
+      page-break-before: always;
+    }
+  }
+
+/************************************************/
+
+
+/************************************************
+  debug
+************************************************/
+
+  /*/
+  #app-container {
+    background-color: #221;
+  }
+    * {
+      border: thin solid black;
+    }
+  /*/
+
+
+
+/************************************************/
+
