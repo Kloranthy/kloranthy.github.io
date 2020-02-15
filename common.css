@@ -24,12 +24,6 @@
     height: 100%;
     min-height: max-content;
 
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-
     margin: 0;
     padding: 0;
 
@@ -107,13 +101,6 @@
 
     height: 100%;
     min-height: max-content;
-    max-height: unset;
-
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
 
     padding: 16px;
 
@@ -154,9 +141,6 @@
     padding: 8px 16px 20px 16px;
 
     margin: 8px;
-  }
-  main > section + section {
-    margin-top: 16px;
   }
   main > section > * {
     width: 90%;
@@ -286,7 +270,7 @@
 
 
 /************************************************
-  theme ( appearance? )
+  theme ( color and borders/outlines )
 ************************************************/
 
   #app-container {
@@ -358,7 +342,7 @@
       border: none;
     }
     section {
-      border: thin solid black;
+      border: none;
     }
 
     section,
@@ -370,11 +354,6 @@
     section {
       break-after: auto;
       page-break-after: always;
-    }
-    li,
-    h2 {
-      break-before: auto;
-      page-break-before: always;
     }
   }
 
